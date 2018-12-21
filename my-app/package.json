@@ -1,0 +1,34 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "concurrently": "^4.1.0",
+    "cookie-parser": "^1.4.3",
+    "popmotion": "^8.5.4",
+    "react": "^16.6.1",
+    "react-bootstrap-table": "^4.3.1",
+    "react-dom": "^16.6.1",
+    "react-scripts": "^2.1.1",
+    "tedious": "^3.0.1",
+    "tedious-connection-pool": "^1.0.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-lint": "eslint --ignore-pattern \"build\" --ignore-path .gitignore .",
+    "server": " node server.js",
+    "client": " set HTTPS=true&& cd chinese-zodiac && npm run start",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
